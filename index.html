@@ -38,6 +38,7 @@
         /* Navigation Bar */
         nav {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             background-color: #3949AB;
             position: sticky;
@@ -59,7 +60,7 @@
 
         /* Section Styles */
         section {
-            padding: 60px;
+            padding: 60px 30px; /* Add horizontal padding for smaller screens */
             margin: 30px auto;
             background-color: white;
             border-radius: 12px;
@@ -100,9 +101,7 @@
             padding: 20px;
             background-color: #3949AB;
             color: white;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            position: relative; /* Changed to relative for mobile */
         }
 
         /* Button Styling for Contact Section */
@@ -127,11 +126,37 @@
 
         /* Media Queries for Mobile Responsiveness */
         @media (max-width: 768px) {
-            section {
-                padding: 40px;
+            header h1 {
+                font-size: 2.5rem;
             }
             nav a {
                 font-size: 0.9rem;
+                padding: 10px 15px;
+            }
+            section {
+                padding: 40px 20px; /* Adjust padding for smaller screens */
+            }
+            section h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            section {
+                padding: 30px 15px; /* Further adjust padding for smaller screens */
+            }
+            section h2 {
+                font-size: 1.8rem;
+            }
+            nav {
+                flex-direction: column; /* Stack navigation links on smaller screens */
+            }
+            nav a {
+                padding: 10px;
+                text-align: center;
             }
         }
 
@@ -143,7 +168,7 @@
         <h1>Souvik Mahapatra's Profile</h1>
     </header>
 
-    <nav id="index">
+    <nav>
         <a href="#home">Home</a>
         <a href="#about">About Me</a>
         <a href="#education">Education</a>
@@ -159,10 +184,6 @@
         <a href="#contact">Contact</a>
     </nav>
 
-    #index{
-        display: flex;
-    }
-
     <!-- Home Section -->
     <section id="home">
         <h2>Home</h2>
@@ -171,22 +192,20 @@
 
     <!-- About Me Section -->
     <section id="about">
-    <h2>About Me</h2>
-    <p>Hello! I am <strong>Souvik Mahapatra</strong>, born on 12th September 2004, hailing from Jhargram, West Bengal. Currently, I am pursuing my engineering degree and have a deep passion for both technology and sports. My interests span across Cricket and Volleyball, where I have competed in professional tournaments. I am highly motivated to excel in the technological field while maintaining my active involvement in sports, which constantly drives me to achieve my goals and stay balanced in my pursuits.</p>
-</section>
-
+        <h2>About Me</h2>
+        <p>Hello! I am <strong>Souvik Mahapatra</strong>, born on 12th September 2004, hailing from Jhargram, West Bengal. Currently, I am pursuing my engineering degree and have a deep passion for both technology and sports. My interests span across Cricket and Volleyball, where I have competed in professional tournaments. I am highly motivated to excel in the technological field while maintaining my active involvement in sports, which constantly drives me to achieve my goals and stay balanced in my pursuits.</p>
+    </section>
 
     <!-- Educational Background Section -->
     <section id="education">
-    <h2>Educational Background</h2>
-    <p><strong>Secondary Education:</strong><br>
-       I completed my secondary education at <strong>T.P.S. D.A.V. Public School</strong>, Baharagora, securing an impressive <strong>96.4%</strong> in my board examinations during the 2020-2021 academic session.<br><br>
-       <strong>Higher Secondary Education:</strong><br>
-       I pursued my higher secondary studies at <strong>ODM Public School</strong>, Bhubaneswar, achieving <strong>81.6%</strong> in my board examinations in the 2022-2023 session.<br><br>
-       <strong>Current Studies:</strong><br>
-       At present, I am working towards a degree in engineering at the <strong>Institute of Engineering and Management (IEM), Kolkata</strong>, where I am further honing my skills and deepening my understanding of technology.</p>
-</section>
-
+        <h2>Educational Background</h2>
+        <p><strong>Secondary Education:</strong><br>
+           I completed my secondary education at <strong>T.P.S. D.A.V. Public School</strong>, Baharagora, securing an impressive <strong>96.4%</strong> in my board examinations during the 2020-2021 academic session.<br><br>
+           <strong>Higher Secondary Education:</strong><br>
+           I pursued my higher secondary studies at <strong>ODM Public School</strong>, Bhubaneswar, achieving <strong>81.6%</strong> in my board examinations in the 2022-2023 session.<br><br>
+           <strong>Current Studies:</strong><br>
+           At present, I am working towards a degree in engineering at the <strong>Institute of Engineering and Management (IEM), Kolkata</strong>, where I am further honing my skills and deepening my understanding of technology.</p>
+    </section>
 
     <!-- Experience Section -->
     <section id="experience">
@@ -220,23 +239,19 @@
     <!-- Membership Section -->
     <section id="membership">
         <h2>Membership</h2>
-        <p>As someone passionate about both sports and technology, I am proud to be a part of several organizations:</p>
-        <ul>
-            <li>Active member of various local and national <strong>sports organizations</strong>.</li>
-            <li>Regular participant in tech communities focused on AI, coding, and innovation.</li>
-        </ul>
+        <p>I am a member of several sports organizations, engaging in activities that promote teamwork, leadership, and community building. These memberships have allowed me to grow as an individual and collaborate with others who share my passion for sports and technology.</p>
     </section>
 
     <!-- Research Thrust Area Section -->
     <section id="research">
         <h2>Research Thrust Area</h2>
-        <p>My primary research interests lie in Artificial Intelligence and its impact on different industries. I am particularly fascinated by the intersection of AI with sports analytics, automation, and futuristic technology solutions. I also have a keen interest in how mathematics can drive innovations in the tech space.</p>
+        <p>I have a keen interest in research areas related to <strong>Artificial Intelligence</strong> and <strong>Technology</strong>. My exploration into these fields is driven by a desire to contribute to innovative solutions that can address complex challenges in various industries.</p>
     </section>
 
     <!-- List of Events Section -->
     <section id="events">
         <h2>List of Events (Organized/Attended)</h2>
-        <p>Here are some of the key events I've had the honor of attending and organizing:</p>
+        <p>I have participated in a variety of events that have enriched my educational experience, including:</p>
         <ul>
             <li>Attended the prestigious <strong>Science of Consciousness Program</strong> at Jadavpur University, exploring the nexus between science and consciousness.</li>
             <li>Participated in numerous technical fests, Olympiads, and inter-school events during my school years.</li>
@@ -255,7 +270,7 @@
 
     <!-- Courses Completed Section -->
     <section id="courses">
-        <h2>Courses Completed</h2>
+        <h2>Courses Completed (NPTEL/COURSERA/LinkedIn Learning)</h2>
         <p>I am currently pursuing the following courses to expand my knowledge and skills:</p>
         <ul>
             <li><strong>NPTEL:</strong> Courses on AI, Data Science, and Machine Learning.</li>
